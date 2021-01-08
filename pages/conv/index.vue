@@ -14,7 +14,7 @@
                 required
               ></v-text-field>
 
-              <v-btn color="primary" @click="validate">{{
+              <v-btn color="primary" @click="submit1">{{
                 $t('Submit')
               }}</v-btn>
 
@@ -65,28 +65,41 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component({
-  components: {},
+  layout : "conv",
+  components: {
+    
+  },
 })
 export default class about extends Vue {
   baseUrl: string = process.env.BASE_URL || ''
 
+  manifest: string = ""
+
   head() {
-    const title =
-      this.$i18n.locale === 'ja'
-        ? '東京大学史料編纂所'
-        : 'Historiographical Institute The University of Tokyo'
+    const title = this.$t("IIIF Converter")
     return {
       titleTemplate: null,
       title,
     }
   }
+
+  submit1(){
+    const manifest = this.manifest
+
+    if(manifest == ""){
+      return
+    }
+
+    this.$router.push(
+      this.localePath({
+        name: 'conv-convert2curation',
+        query : {
+          manifest
+        }
+      }),
+      () => {},
+      () => {}
+    )
+  }
 }
 </script>
-<style>
-table th {
-  border: 1px solid #ddd;
-}
-table td {
-  border: 1px solid #ddd;
-}
-</style>

@@ -23,11 +23,11 @@ const basePath = baseUrl + baseDir
 // meta
 const lang = 'ja'
 const siteName =
-  '東京大学史料編纂所 | Historiographical Institute The University of Tokyo'
+  'IIIF Application'
 const siteDesc =
-  '東京大学史料編纂所は、東京大学の附置研究所で、国内外の史料の調査、収集・複写、分析、編纂、公開を行い、歴史情報学研究を推進することを目的とする研究所である。1793年、徳川幕府の援助を受けた国学者塙保己一が開設した和学講談所を源流とする。 近年では複写に最新の写真技術やデジタル画像技術が駆使されている。'
+  'IIIF関連のアプリケーション集です。'
 const siteKeywords =
-  '東京大学史料編纂所, Historiographical Institute, 東京大学, The University of Tokyo'
+  'IIIF'
 
 // images
 const iconImages = basePath + 'img/icons/'
@@ -36,7 +36,7 @@ const ogpImages = basePath + 'img/ogp/' // cdnPath + 'img/ogp/'
 console.log({ iconImages })
 
 // pwa
-const shortName = 'HI'
+const shortName = 'IIIF'
 const manifestIcon = 'img/icons/icon-512.png'
 // const splashscreens = cdnPath + 'img/splashscreens/'
 
@@ -92,14 +92,6 @@ export default {
       {
         name: 'apple-mobile-web-app-status-bar-style',
         content: 'black-translucent',
-      },
-    ],
-    script: [
-      {
-        src: baseUrl + '/assets/js/jquery-3.4.1.min.js',
-      },
-      {
-        src: baseUrl + '/assets/js/jquery-migrate-3.1.0.min.js',
       },
     ],
     link: [

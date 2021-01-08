@@ -1,14 +1,21 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar color="white">
-        <v-toolbar-title> IIIF Converter </v-toolbar-title>
+      <v-app-bar color="primary" dark>
+        <v-toolbar-title>
+          <nuxt-link
+            :to="localePath({ name: 'conv' })"
+            style="text-decoration: none; color: white"
+          >
+            IIIF Converter あいう
+          </nuxt-link>
+        </v-toolbar-title>
 
         <v-spacer />
 
         <v-menu offset-y>
           <template v-slot:activator="{ on }">
-            <v-btn depressed btn v-on="on">
+            <v-btn depressed color="primary" btn v-on="on">
               <v-icon class="mr-2">mdi-translate</v-icon>
               <template v-if="$vuetify.breakpoint.name != 'xs'">
                 {{ langStr }}</template
@@ -36,7 +43,18 @@
     <v-footer :dark="true" class="mt-0">
       <v-container>
         <div class="text-center">
-          Developed by <a href="https://researchmap.jp/nakamura.satoru/">Satoru Nakamura</a> &amp; <a href="https://researchmap.jp/knagasaki/">Kiyonori Nagasaki</a>
+          Developed by
+          <a
+            href="https://researchmap.jp/nakamura.satoru/"
+            style="color: white; text-decoration: none"
+            >Satoru Nakamura</a
+          >
+          &amp;
+          <a
+            href="https://researchmap.jp/knagasaki/"
+            style="color: white; text-decoration: none"
+            >Kiyonori Nagasaki</a
+          >
         </div>
       </v-container>
     </v-footer>
@@ -93,8 +111,6 @@ export default class Layout extends Vue {
         return '日本語'
       case 'en':
         return 'English'
-      case 'zh':
-        return 'Chinese'
     }
   }
 }
@@ -103,5 +119,11 @@ export default class Layout extends Vue {
 <style>
 .v-btn {
   text-transform: none !important;
+}
+table th {
+  border: 1px solid #ddd;
+}
+table td {
+  border: 1px solid #ddd;
 }
 </style>

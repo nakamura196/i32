@@ -10,16 +10,14 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component({
+  layout: 'conv',
   components: {},
 })
 export default class about extends Vue {
   baseUrl: string = process.env.BASE_URL || ''
 
   head() {
-    const title =
-      this.$i18n.locale === 'ja'
-        ? '東京大学史料編纂所'
-        : 'Historiographical Institute The University of Tokyo'
+    const title = this.$t('IIIF Converter')
     return {
       titleTemplate: null,
       title,
@@ -27,11 +25,3 @@ export default class about extends Vue {
   }
 }
 </script>
-<style>
-table th {
-  border: 1px solid #ddd;
-}
-table td {
-  border: 1px solid #ddd;
-}
-</style>
