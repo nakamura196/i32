@@ -1,4 +1,3 @@
 module.exports = {
-  BASE_URL: 'https://diyhistory.org/private/hi2021',
-  currentYear: 2021,
+  BASE_URL: 'https://nakamura196.github.io/i32',
 }

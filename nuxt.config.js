@@ -8,7 +8,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/private/hi2021/',
+          base: '/i32/',
         },
       }
     : {}
