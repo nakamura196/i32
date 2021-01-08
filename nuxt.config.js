@@ -205,7 +205,6 @@ export default {
     locales: [
       { code: 'en', iso: 'en_US', file: 'en.json' },
       { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
-      { code: 'zh', iso: 'zh_CN', file: 'zh.json' },
     ],
     defaultLocale: 'ja',
     vueI18nLoader: true,
