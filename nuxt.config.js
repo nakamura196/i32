@@ -22,12 +22,9 @@ const basePath = baseUrl + baseDir
 
 // meta
 const lang = 'ja'
-const siteName =
-  'IIIF Application'
-const siteDesc =
-  'IIIF関連のアプリケーション集です。'
-const siteKeywords =
-  'IIIF'
+const siteName = 'IIIF Application'
+const siteDesc = 'IIIF関連のアプリケーション集です。'
+const siteKeywords = 'IIIF'
 
 // images
 const iconImages = basePath + 'img/icons/'
@@ -42,8 +39,8 @@ const manifestIcon = 'img/icons/icon-512.png'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
-  // target: 'static',
-  ssr: false,
+  target: 'static',
+  // ssr: false,
   // srcDir: 'src/',
 
   env,
